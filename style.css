@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: rgb(55, 55, 67);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+}
+
+.testimonial-card {
+    background-color: #1e1e28;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    position: relative;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+.testimonial-card::before {
+    content: '\201C';
+    font-size: 4rem;
+    color: #50fa7b;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+}
+
+.testimonial-card::after {
+    content: '”';
+    font-size: 4rem;
+    color: #50fa7b;
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+}
+
+.testimonial-text {
+    margin: 20px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding-top: 1.5rem;
+}
+
+.profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 2px;
+    border: 2px solid #50fa7b;
+    object-fit: cover;
+}
+
+.profile-info {
+    margin-left: 10px;
+}
+
+.profile-info h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.profile-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    .testimonial-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial-card {
+        width: 90%;
+    }
+}
